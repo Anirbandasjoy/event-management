@@ -12,3 +12,7 @@
 .service:hover .overlay {
   opacity: 1;
 }
+
+a .active {
+  background-color: red !important;
+}

@@ -19,7 +19,7 @@ const Services = () => {
                 <p className='text-sm text-gray-400'>From Wedding Functions to Birthday Parties or Corporate Events to Musical Functions, We offer <br /> full range of Events Management Services that scale to your needs & budget.</p>
             </div>
 
-            <div className='mt-24 text-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-4 px-2 md:px-0'>
+            <div className='mt-24 text-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-4 px-2 lg:px-0'>
 
                 {
                     serviceData.map(data => {

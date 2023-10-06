@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 import profileImage from '../../assets/user.png'
 import { AuthContext } from '../../context/AuthProvider'
@@ -8,9 +8,9 @@ const Navbar = () => {
     const { user } = useContext(AuthContext);
     console.log(user)
     const navitems = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/service">Services</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/service">Services</NavLink></li>
+        <li><NavLink to="/contact">Contact</NavLink></li>
 
 
     </>

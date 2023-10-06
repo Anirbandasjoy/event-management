@@ -6,6 +6,7 @@ import NotFound from "../pages/notFound/NotFound";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import PrivetRoutes from "./PrivetRoutes";
+import Contact from "../pages/contact/Contact";
 
 export const routes = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register />
+            },
+            {
+                path: "/contact",
+                element: <PrivetRoutes> <Contact /></PrivetRoutes>
             }
         ]
     }

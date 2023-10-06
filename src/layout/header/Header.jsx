@@ -24,15 +24,15 @@ const Header = () => {
             <div className='flex flex-col md:flex-row mb-6 md:mb-0 text-xs items-center  gap-5 list-none'>
                 <div className='flex items-center gap-2'>
                     <BsTelephoneForward />
-                    <li>(+01) 123 456 7899</li>
+                    <li>(+088) 01772838734</li>
                 </div>
                 <div className='flex items-center gap-2'>
                     <HiOutlineMail />
-                    <li>contact@dvents.com</li>
+                    <li>adj@gmail.com</li>
                 </div>
                 <div className='flex items-center gap-2'>
                     <AiOutlineClockCircle />
-                    <li> Mon – Fri 9.00 am – 6.00 pm</li>
+                    <li> Sut – Fri 9.00 am – 6.00 pm</li>
                 </div>
 
             </div>
