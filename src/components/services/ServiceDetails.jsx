@@ -13,6 +13,7 @@ const ServiceDetails = () => {
                 <div className=' flex flex-col'>
                     <div className='flex-1 space-y-3'>
                         <h1 className='text-3xl  text-red-300 font-bold'>{name}</h1>
+                        <h2 className='text-xl  text-red-300 font-bold'>{price}</h2>
                         <p className='text-justify text-xs sm:text-sm text-gray-600 '>{description}</p>
                     </div>
 

@@ -29,7 +29,6 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unSubcriber = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
-            console.log('objarbar', currentUser);
             setLoading(false)
         });
         return () => {

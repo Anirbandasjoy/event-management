@@ -58,8 +58,8 @@ const Register = () => {
 
                 })
                 .catch((err) => {
-                    setRegisterError(err.message);
-                    console.log(err.message)
+                    setRegisterError("Somthing Rong");
+
                 })
 
 
@@ -69,7 +69,7 @@ const Register = () => {
 
 
     return (
-        <div className='max-w-6xl mx-auto bg-base-200'>
+        <div className='max-w-6xl mx-auto bg-base-300'>
             <div className='flex  justify-center  px-4 md:px-0'>
                 <div className="w-full max-w-lg  p-4  rounded-md  sm:p-6 md:p-8 ">
                     <form className="space-y-4 " onSubmit={formik.handleSubmit}>

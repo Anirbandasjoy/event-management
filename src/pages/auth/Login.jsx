@@ -43,8 +43,7 @@ const Login = () => {
                     navigate("/")
                 })
                 .catch((err) => {
-                    console.log(err.message);
-                    setLoginError(err.message)
+                    setLoginError("Email or Password dose not matches")
                 })
 
 
@@ -68,7 +67,7 @@ const Login = () => {
     }
 
     return (
-        <div className='max-w-6xl mt-2 mx-auto bg-base-200'>
+        <div className='max-w-6xl mt-2 mx-auto bg-base-300'>
             <div className='flex  justify-center px-4 md:px-0'>
                 <div className="w-full max-w-lg p-4   rounded-md  sm:p-6 md:p-8 ">
                     <form className="space-y-6 " onSubmit={formik.handleSubmit}>
@@ -82,7 +81,11 @@ const Login = () => {
                         <div>
                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
                             <input type="text" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="your email" onChange={formik.handleChange} value={formik.values.email} />
+
+
                             <span className="text-red-600 text-xs">{formik.touched.email ? formik.errors.email : ""}</span>
+
+
                         </div>
                         <div>
                             <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>

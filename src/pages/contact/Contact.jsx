@@ -12,7 +12,6 @@ const Contact = () => {
         <div >
             <div className='' data-aos="zoom-in">
                 <img src={contactImage} alt="" />
-
             </div>
 
             <div className='mt-8 mb-10' data-aos="zoom-in">
