@@ -68,9 +68,9 @@ const Login = () => {
     }
 
     return (
-        <div className='max-w-6xl mx-auto '>
+        <div className='max-w-6xl mt-2 mx-auto bg-base-200'>
             <div className='flex  justify-center px-4 md:px-0'>
-                <div className="w-full max-w-md p-4 bg-gray-300  rounded-md  sm:p-6 md:p-8 ">
+                <div className="w-full max-w-lg p-4   rounded-md  sm:p-6 md:p-8 ">
                     <form className="space-y-6 " onSubmit={formik.handleSubmit}>
                         <h5 className="text-xl font-medium text-gray-900  text-center">Sign In </h5>
                         <p className='text-center text-sm text-red-600'>
@@ -106,6 +106,10 @@ const Login = () => {
 
                         </div>
                         <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Login </button>
+                        <div className="text-sm font-medium text-gray-500 ">
+                            Not Registerd? please <Link to="/register" className="text-blue-700 hover:underline ">Register</Link>
+
+                        </div>
                         {/* social login start */}
                         <div className='flex flex-col sm:flex-row justify-center items-center '>
 
@@ -120,10 +124,7 @@ const Login = () => {
 
                         {/* social login end */}
 
-                        <div className="text-sm font-medium text-gray-500 ">
-                            Not Registerd? please <Link to="/register" className="text-blue-700 hover:underline ">Register</Link>
 
-                        </div>
                     </form>
                 </div>
             </div>

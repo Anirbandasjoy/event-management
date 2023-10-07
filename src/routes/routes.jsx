@@ -7,6 +7,7 @@ import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import PrivetRoutes from "./PrivetRoutes";
 import Contact from "../pages/contact/Contact";
+import Tickets from "../components/Tickets";
 
 export const routes = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/contact",
                 element: <PrivetRoutes> <Contact /></PrivetRoutes>
+            },
+            {
+                path: "/tickets",
+                element: <PrivetRoutes><Tickets /></PrivetRoutes>
             }
         ]
     }

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "name": "Birthday Parties",
+    "description": "Join us for the Enchanted Garden Wedding of John and Emily, a once-in-a-lifetime celebration of love and commitment. Nestled in a lush and romantic garden, this magical event will transport you to a world of elegance and enchantment. Witness as John and Emily exchange their vows beneath a canopy of blooming flowers, surrounded by the melodious songs of birds. Your presence will make their day even more memorable. The evening will be filled with delectable cuisine, enchanting music, and dancing under the stars. It's an affair you won't want to miss.",
+    "price": "$15,000",
+    "image": "https://i.ibb.co/S3bppHH/nick-fewings-km-LUcvhqh-So-unsplash.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Engagement Parties",
+    "description": "Prepare to be a part of Sophia's 30th Birthday Extravaganza, an unforgettable celebration of a remarkable milestone. We invite you to join us in honoring Sophia, a woman of grace and charisma, as she marks three decades of life's adventures. The venue will be adorned with glitz and glamour, promising a night of opulence and joy. Dance the night away to live music and indulge in a sumptuous feast specially curated for this event. Share your favorite memories with Sophia and be ready for a night of laughter, dancing, and pure joy. Let's make this birthday the most memorable one yet!",
+    "price": "$1,200",
+    "image": "https://i.ibb.co/qNGymJz/gift-habeshaw-s-Qcv-Xmxg-Pfw-unsplash.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Anniversaries ",
+    "description": "Join us for Mark and Lisa's Silver Jubilee Celebration, a remarkable milestone in their enduring love story. After 25 years of shared adventures, trials, and triumphs, Mark and Lisa are renewing their vows to commemorate their enduring commitment to each other. This event will be a heartwarming testament to the power of love. Be a part of this beautiful day as they say 'I do' once again in front of family and friends. The celebration will continue with a lavish reception featuring gourmet cuisine, live music, and a heartwarming toast to the happy couple. Share in their joy and celebrate a love that has stood the test of time.",
+    "price": "$8,500",
+    "image": "https://i.ibb.co/35xKmg9/jonathan-borba-kpfu1-Zna-VBM-unsplash.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Retirement Parties",
+    "description": "Raise your glasses and toast to the future with Chris and Sarah as they embark on their journey toward forever together. This Engagement Soiree is a celebration of their love and commitment to building a life filled with shared dreams and endless happiness. The event will be a night of elegance, featuring an exquisite dinner, enchanting ambiance, and a chance to offer your best wishes to the engaged couple. Join us in celebrating their love story, and let's shower them with love and support as they step into this exciting new chapter of their lives.",
+    "price": "$2,500",
+    "image": "https://i.ibb.co/6Y8S9v3/aaron-burden-c-Eukkv42-O40-unsplash.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Baby shower",
+    "description": "Bid a heartfelt farewell to David as he embarks on his well-deserved retirement journey. David has dedicated decades to his profession and now looks forward to the serene waters of retirement. Join us in celebrating his remarkable career and wishing him a joyful retirement ahead. Share your fondest memories, anecdotes, and well-wishes for David as he begins this new chapter in life. The evening will be filled with laughter, camaraderie, and a toast to the adventures that await him. Your presence will make this retirement bon voyage truly special.",
+    "price": "$1,000",
+    "image": "https://i.ibb.co/ysrW5sq/ajeet-singh-kv1-SCIAk6-NU-unsplash.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Weddings",
+    "description": "Let's come together to celebrate the imminent arrival of a new life into the world at Amanda's Baby Shower Celebration. This joyous occasion is dedicated to Amanda, who is about to embrace the beautiful journey of motherhood. The venue will be adorned with baby-themed decor and a warm, welcoming atmosphere. Enjoy delicious refreshments, play fun games, and take part in heartfelt conversations as we prepare Amanda for the adventure of a lifetime. Bring your well-wishes, advice, and love for the mom-to-be as we shower her with blessings and excitement.",
+    "price": "$800",
+    "image": "https://i.ibb.co/m9nN8tz/eugenivy-now-1-Bs2s-Z9f-D2-Q-unsplash.jpg"
+  }
+]

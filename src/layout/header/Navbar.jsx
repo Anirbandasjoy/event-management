@@ -8,13 +8,13 @@ const Navbar = () => {
     const { user } = useContext(AuthContext);
     const navitems = <>
         <li><NavLink to="/">Home</NavLink></li>
-        {/* <li><NavLink to="/service">Services</NavLink></li> */}
+        <li><NavLink to="/tickets">Tickets</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
 
 
     </>
     return (
-        <div className="navbar">
+        <div className="navbar ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

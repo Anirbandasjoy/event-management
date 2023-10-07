@@ -69,10 +69,10 @@ const Register = () => {
 
 
     return (
-        <div className='max-w-6xl mx-auto '>
-            <div className='flex  justify-center px-4 md:px-0'>
-                <div className="w-full max-w-md p-4 bg-gray-300  rounded-md  sm:p-6 md:p-8 ">
-                    <form className="space-y-6 " onSubmit={formik.handleSubmit}>
+        <div className='max-w-6xl mx-auto bg-base-200'>
+            <div className='flex  justify-center  px-4 md:px-0'>
+                <div className="w-full max-w-lg  p-4  rounded-md  sm:p-6 md:p-8 ">
+                    <form className="space-y-4 " onSubmit={formik.handleSubmit}>
                         <h5 className="text-xl font-medium text-gray-900  text-center">Sign Up </h5>
                         <p className='text-center text-sm text-red-600'>
                             {
@@ -81,23 +81,23 @@ const Register = () => {
                         </p>
 
                         <div>
-                            <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 ">Your name</label>
+
                             <input type="text" name="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="your email" onChange={formik.handleChange} value={formik.values.name} />
                             <span className="text-red-600 text-xs">{formik.touched.name ? formik.errors.name : ""}</span>
                         </div>
 
                         <div>
-                            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+
                             <input type="text" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="your email" onChange={formik.handleChange} value={formik.values.email} />
                             <span className="text-red-600 text-xs">{formik.touched.email ? formik.errors.email : ""}</span>
                         </div>
                         <div>
-                            <label htmlFor="image" className="block mb-2 text-sm font-medium text-gray-900 ">Your Profile image url</label>
+
                             <input type="text" name="image" id="image" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="your image url" onChange={formik.handleChange} value={formik.values.image} />
                             <span className="text-red-600 text-xs">{formik.touched.image ? formik.errors.image : ""}</span>
                         </div>
                         <div>
-                            <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
+
                             <div className='relative'>
                                 <input type={showPassword ? "password" : "text"} name="password" id="password" placeholder="your password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " onChange={formik.handleChange} value={formik.values.password} />
                                 <span onClick={() => setShowPassword(!showPassword)}>
@@ -119,6 +119,10 @@ const Register = () => {
 
                         </div>
                         <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Register </button>
+                        <div className="text-sm font-medium text-gray-500 ">
+                            Already Register? please <Link to="/login" className="text-blue-700 hover:underline ">Login</Link>
+
+                        </div>
                         {/* social login start */}
                         <div className='flex flex-col sm:flex-row justify-center items-center '>
 
@@ -131,12 +135,8 @@ const Register = () => {
 
                         </div>
 
-                        {/* social login end */}
 
-                        <div className="text-sm font-medium text-gray-500 ">
-                            Already Register? please <Link to="/login" className="text-blue-700 hover:underline ">Login</Link>
 
-                        </div>
                     </form>
                 </div>
             </div>

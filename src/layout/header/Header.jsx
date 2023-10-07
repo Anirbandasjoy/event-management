@@ -25,7 +25,7 @@ const Header = () => {
             })
     }
     return (
-        <div className='flex flex-col md:flex-row justify-between items-center p-3 '>
+        <div className='flex flex-col md:flex-row justify-between items-center p-3 ' data-aos="zoom-in">
 
             <div className='flex flex-col md:flex-row mb-6 md:mb-0 text-xs items-center  gap-5 list-none'>
                 <div className='flex items-center gap-2'>
