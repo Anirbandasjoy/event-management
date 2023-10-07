@@ -3,6 +3,7 @@ import contactImage from '../../assets/contact.jpg';
 import { FaRegAddressCard } from 'react-icons/fa';
 import { BsTelephoneInbound } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
+import Footer from '../../components/Footer';
 
 const Contact = () => {
     const divStyle = {
@@ -13,7 +14,7 @@ const Contact = () => {
     };
 
     return (
-        <div className='mb-10'>
+        <div >
             <div className='flex items-center justify-center h-[25rem]' style={divStyle}>
 
             </div>
@@ -75,6 +76,9 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='mt-20'>
+                <Footer />
             </div>
 
         </div>

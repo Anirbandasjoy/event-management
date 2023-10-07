@@ -23,7 +23,7 @@ const Services = () => {
 
                 {
                     serviceData.map(data => {
-                        return <div className='' key={data.id}>
+                        return <div key={data.id}>
                             <div>
                                 <div className='relative service'>
                                     <img className=' rounded-sm w-full h-[20rem]' src={data.image} alt={data.name} />

@@ -8,7 +8,7 @@ const Navbar = () => {
     const { user } = useContext(AuthContext);
     const navitems = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/service">Services</NavLink></li>
+        {/* <li><NavLink to="/service">Services</NavLink></li> */}
         <li><NavLink to="/contact">Contact</NavLink></li>
 
 

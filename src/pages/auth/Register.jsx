@@ -1,15 +1,17 @@
 import { useContext, useState } from 'react';
 import { useFormik } from 'formik'
-import { Link, } from 'react-router-dom'
+import { Link, useNavigate, } from 'react-router-dom'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import * as yup from 'yup';
 import { AuthContext } from '../../context/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import Swal from 'sweetalert2';
 
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(true);
     const [registerError, setRegisterError] = useState("");
+    const navigate = useNavigate();
 
     const { registerUser } = useContext(AuthContext)
 
@@ -25,8 +27,8 @@ const Register = () => {
             image: yup.string().required(),
             email: yup.string().email().required(),
             password: yup.string().matches(
-                /^(?=.*[A-Z])(?=.*\d).{6,}$/,
-                "Password at least one uppercase one number and min 6 char"
+                /^(?=.*[A-Z])(?=.*[\W_]).{6,}$/,
+                "Password at least 6 char and one uppercase one spacial char"
             ).required()
         }),
 
@@ -47,6 +49,12 @@ const Register = () => {
                         .catch((err) => console.log(err.message))
 
                     console.log(userCredetial.user)
+                    Swal.fire(
+                        'Wellcome!',
+                        'Your Registation Successfully!',
+                        'success'
+                    )
+                    navigate("/")
 
                 })
                 .catch((err) => {

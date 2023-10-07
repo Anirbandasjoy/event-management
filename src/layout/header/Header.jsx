@@ -2,8 +2,10 @@ import React, { useContext } from 'react'
 import { AiFillTwitterCircle, AiFillLinkedin, AiOutlineInstagram, AiOutlineClockCircle } from 'react-icons/ai'
 import { BsFacebook, BsTelephoneForward } from 'react-icons/bs'
 import { HiOutlineMail } from 'react-icons/hi'
+import { CgProfile } from 'react-icons/cg'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthProvider'
+import Swal from 'sweetalert2'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -11,7 +13,11 @@ const Header = () => {
     const handleLogOut = () => {
         logOut()
             .then(() => {
-                alert("logOut successfully")
+                Swal.fire(
+                    '✅☑️✅',
+                    'Logout Successfully!',
+                    'success'
+                )
                 navigate("/login")
             })
             .catch((err) => {
@@ -34,6 +40,12 @@ const Header = () => {
                     <AiOutlineClockCircle />
                     <li> Sut – Fri 9.00 am – 6.00 pm</li>
                 </div>
+                {
+                    user && <div className='flex items-center gap-2'>
+                        <CgProfile />
+                        <li>{user?.displayName}</li>
+                    </div>
+                }
 
             </div>
             <div className='flex items-center gap-3'>

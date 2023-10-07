@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate, } from 'react-router-dom'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import * as yup from 'yup';
 import { AuthContext } from '../../context/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const Login = () => {
@@ -13,6 +14,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -21,8 +23,8 @@ const Login = () => {
         validationSchema: yup.object({
             email: yup.string().email().required(),
             password: yup.string().matches(
-                /^(?=.*[A-Z])(?=.*\d).{6,}$/,
-                "Password at least one uppercase one number and min 6 char"
+                /^(?=.*[A-Z])(?=.*[\W_]).{6,}$/,
+                "Password at least 6 char and one uppercase one spacial char"
             ).required()
         }),
 
@@ -33,7 +35,11 @@ const Login = () => {
             loginUser(email, password)
                 .then((userCredential) => {
                     console.log(userCredential.user);
-                    alert("Logged In successfully")
+                    Swal.fire(
+                        'Wellcome!',
+                        ' Logged in Successfully!',
+                        'success'
+                    )
                     navigate("/")
                 })
                 .catch((err) => {
@@ -49,6 +55,11 @@ const Login = () => {
     const handleGoogleLogin = () => {
         googleLoginUser()
             .then(() => {
+                Swal.fire(
+                    'Wellcome!',
+                    ' Logged in Successfully!',
+                    'success'
+                )
                 navigate("/")
             })
             .catch((err) => [
