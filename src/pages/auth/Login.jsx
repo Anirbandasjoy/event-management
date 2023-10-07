@@ -12,7 +12,6 @@ const Login = () => {
     const [loginError, setLoginError] = useState("");
     const { loginUser, googleLoginUser } = useContext(AuthContext);
     const navigate = useNavigate();
-    const location = useLocation();
 
 
     const formik = useFormik({
