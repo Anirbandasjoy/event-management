@@ -5,10 +5,10 @@ const ServiceDetails = () => {
     const { state } = useLocation();
     const { name, description, price, image } = state || {}
     return (
-        <div className='container mx-auto px-2 md:px-0 mb-20'>
-            <div className='flex justify-center gap-5 flex-col md:flex-row'>
+        <div className='container mx-auto px-2 lg:px-0 mb-20'>
+            <div className='flex justify-center gap-5 flex-col lg:flex-row'>
                 <div>
-                    <img src={image} alt="" />
+                    <img className='w-full h-full' src={image} alt="" />
                 </div>
                 <div className=' flex flex-col'>
                     <div className='flex-1 space-y-3'>
@@ -18,7 +18,7 @@ const ServiceDetails = () => {
 
 
                     <div>
-                        <button className='bg-purple-700 rounded-sm text-white font-bold w-full mx-auto  py-3 '>
+                        <button className='bg-purple-700 mt-5 lg:mt-0 rounded-sm text-white font-bold w-full mx-auto  py-3 '>
                             Order now
                         </button>
                     </div>

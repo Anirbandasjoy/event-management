@@ -15,15 +15,15 @@ const Services = () => {
     return (
         <div className='my-20 container mx-auto'>
             <div className='text-center space-y-7'>
-                <h1 className='text-4xl text-gray-400'>The <span className='font-bold text-red-400'>Event Management</span> Specialists</h1>
-                <p className='text-sm text-gray-400'>From Wedding Functions to Birthday Parties or Corporate Events to Musical Functions, We offer <br /> full range of Events Management Services that scale to your needs & budget.</p>
+                <h1 className='text-4xl text-gray-400' data-aos="zoom-in">The <span className='font-bold text-red-400' >Event Management</span> Specialists</h1>
+                <p className='text-sm text-gray-400' data-aos="zoom-in">From Wedding Functions to Birthday Parties or Corporate Events to Musical Functions, We offer <br /> full range of Events Management Services that scale to your needs & budget.</p>
             </div>
 
             <div className='mt-24 text-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-4 px-2 lg:px-0'>
 
                 {
                     serviceData.map(data => {
-                        return <div key={data.id}>
+                        return <div key={data.id} data-aos="zoom-in">
                             <div>
                                 <div className='relative service'>
                                     <img className=' rounded-sm w-full h-[20rem]' src={data.image} alt={data.name} />

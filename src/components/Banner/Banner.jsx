@@ -5,7 +5,7 @@ import banner3 from '../../assets/banner/3.jpg'
 import banner4 from '../../assets/banner/4.jpg'
 const Banner = () => {
     return (
-        <div className='px-2 rounded-sm'>
+        <div className='px-2 rounded-sm' data-aos="zoom-in">
             <div className="carousel w-full ">
                 <div id="slide1" className="carousel-item relative w-full h-[80vh]">
                     <img src={banner1} className="w-full" />

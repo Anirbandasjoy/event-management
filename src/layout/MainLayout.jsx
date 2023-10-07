@@ -12,7 +12,7 @@ const MainLayout = () => {
                 <Header />
             </div>
 
-            <div className='container mx-auto bg-white'>
+            <div className='lg:px-5 px-0 bg-base-100'>
                 <Navbar />
             </div>
 
