@@ -16,4 +16,4 @@ Click here for the website live link: [https://evm-assignment-nine.surge.sh](htt
 
 - Our website has user login and registration system, a user visits our website and if he registers, he can see the details of our services.
 
-- Celebrate the culmination of years of hard work and dedication with a graduation party that highlights the graduates' achievements. Our team creates a memorable event that marks this important milestone.
+- You can see our event overview by going to the home page of our website. In which you can see the number of PARTICIPANT, TOTAL EVENTS, SPONSORS
