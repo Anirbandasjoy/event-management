@@ -4,6 +4,7 @@ import { Link, } from 'react-router-dom'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import * as yup from 'yup';
 import { AuthContext } from '../../context/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 
 const Register = () => {
@@ -16,10 +17,12 @@ const Register = () => {
         initialValues: {
             email: "",
             password: "",
-            name: ""
+            name: "",
+            image: ""
         },
         validationSchema: yup.object({
             name: yup.string().required(),
+            image: yup.string().required(),
             email: yup.string().email().required(),
             password: yup.string().matches(
                 /^(?=.*[A-Z])(?=.*\d).{6,}$/,
@@ -29,13 +32,22 @@ const Register = () => {
 
         onSubmit: (values, { resetForm }) => {
 
-            const { email, password, name } = values;
+            const { email, password, name, image } = values;
             setRegisterError("")
 
             registerUser(email, password)
                 .then((userCredetial) => {
-                    alert("Register successfully");
+                    updateProfile(userCredetial.user, {
+                        displayName: name,
+                        photoURL: image
+                    })
+                        .then(() => {
+                            console.log("updated profile")
+                        })
+                        .catch((err) => console.log(err.message))
+
                     console.log(userCredetial.user)
+
                 })
                 .catch((err) => {
                     setRegisterError(err.message);
@@ -72,6 +84,11 @@ const Register = () => {
                             <span className="text-red-600 text-xs">{formik.touched.email ? formik.errors.email : ""}</span>
                         </div>
                         <div>
+                            <label htmlFor="image" className="block mb-2 text-sm font-medium text-gray-900 ">Your Profile image url</label>
+                            <input type="text" name="image" id="image" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="your image url" onChange={formik.handleChange} value={formik.values.image} />
+                            <span className="text-red-600 text-xs">{formik.touched.image ? formik.errors.image : ""}</span>
+                        </div>
+                        <div>
                             <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
                             <div className='relative'>
                                 <input type={showPassword ? "password" : "text"} name="password" id="password" placeholder="your password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " onChange={formik.handleChange} value={formik.values.password} />
@@ -83,6 +100,7 @@ const Register = () => {
                             </div>
                             <span className="text-red-600 text-xs">{formik.touched.password ? formik.errors.password : ""}</span>
                         </div>
+
                         <div className="flex items-start">
                             <div className="flex items-start">
                                 <div className="flex items-center h-5">

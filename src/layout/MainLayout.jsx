@@ -1,9 +1,11 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigation } from 'react-router-dom'
 import Header from './header/Header'
 import Navbar from './header/Navbar'
+import Loading from '../components/Loading'
 
 const MainLayout = () => {
+    const navigation = useNavigation()
     return (
         <div>
             <div className='bg-base-200 px-3'>
@@ -14,8 +16,11 @@ const MainLayout = () => {
                 <Navbar />
             </div>
 
+            {
+                navigation.state === "loading" ? <Loading /> :
+                    <Outlet />
+            }
 
-            <Outlet />
         </div>
     )
 }
